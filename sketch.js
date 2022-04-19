@@ -17,8 +17,8 @@ function draw(){
     } else {
         strokeWeight(0) ;
     }
-    point(mouseX,mouseY) ;
-    
+    // point(mouseX,mouseY) ;
+    line(mouseX,mouseY,pmouseX,pmouseY) ;
 }
 
 
