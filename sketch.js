@@ -15,7 +15,8 @@ async function getData() {
         const row = elt.split(',');
         const year = row[0];
         const temp = row[1];
-    
+        console.log(year);
+        console.log(temp);
     });
 }
 // papa.parse('test.csv')
