@@ -15,10 +15,27 @@ async function getData() {
         const row = elt.split(',');
         const year = row[0];
         const temp = row[1];
+        xlabels.push(year);
+        ylables.push(temp);
         console.log(year);
         console.log(temp);
     });
 }
+const xlabels = [];
+const ylabels = [];
+const ctx = document.getElementById('mychart').getContext('2d');
+const myChart = new CharacterData(ctx, {
+    type:'line',
+    data:{
+        labels: xlabels,
+        datasets: [
+            {
+                data:ylabels
+            }
+        ]
+    }
+}
+)
 // papa.parse('test.csv')
 
 
