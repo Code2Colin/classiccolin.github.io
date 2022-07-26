@@ -5,11 +5,18 @@
 getData();
 
 async function getData() {
-    const myRequest = new Request('./test.csv');
-    const response = await fetch(myRequest,{'mode':"same-orgins"});
+    const myRequest = new Request('https://raw.githubusercontent.com/classiccolin/classiccolin.github.io/main/ZonAnnTs+dSST.csv');
+    const response = await fetch(myRequest);
     const data = await response.text();
     console.log(data);
 
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+        const row = elt.split(',');
+        const year = row[0];
+        const temp = row[1];
+    
+    });
 }
 // papa.parse('test.csv')
 
