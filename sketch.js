@@ -16,7 +16,7 @@ async function getData() {
         const year = row[0];
         const temp = row[1];
         xlabels.push(year);
-        ylables.push(temp);
+        ylabels.push(temp);
         console.log(year);
         console.log(temp);
     });
