@@ -2,7 +2,7 @@ const pianotes =["A","B","C","D","E","F","G"];
 
 function setup() {
 
-    createP("Note randomizer for practicing");
+    
     createCanvas(300,300);
     frameRate(1/2);
 
