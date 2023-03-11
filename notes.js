@@ -1,7 +1,8 @@
 function setup() {
 
+    createP("Note randomizer for practicing")
     createCanvas(300,300);
-
+    frameRate(300);
     const notes =["A","B","C","D","E","F","G"];
 
 }
