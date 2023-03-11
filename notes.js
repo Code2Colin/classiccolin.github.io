@@ -23,8 +23,8 @@ function draw() {
 
     textSize(64);
 
-    text("Note" + a, 150, 150);
-    createP(a);
+    text(a, 130, 160);
+    //createP(a);
 
 }
 
