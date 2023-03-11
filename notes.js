@@ -1,8 +1,8 @@
 function setup() {
 
-    createP("Note randomizer for practicing")
+    createP("Note randomizer for practicing");
     createCanvas(300,300);
-    frameRate(300);
+    frameRate(1/15);
     const notes =["A","B","C","D","E","F","G"];
 
 }
@@ -19,7 +19,7 @@ function draw() {
     textSize(64);
 
     text("Note" + a, 150, 150);
-    
+    createP(a);
 
 }
 
