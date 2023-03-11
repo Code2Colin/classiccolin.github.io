@@ -1,6 +1,6 @@
 function setup() {
 
-    createCanvas(120,120);
+    createCanvas(300,300);
 
     const notes =["A","B","C","D","E","F","G"];
 
@@ -13,10 +13,11 @@ function draw() {
     //const notes =["A","B","C","D","E","F","G"];
 
     let a = random(notes);
+    strokeWeight(12);
 
-    textSize(16);
+    textSize(64);
 
-    text(a,50,50);
+    text("Note" + a, 150, 150);
     
 
 }
