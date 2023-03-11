@@ -23,7 +23,7 @@ function draw() {
 
     textSize(64);
 
-    text(a, 130, 160);
+    text(" " + a, 130, 160);
     //createP(a);
 
 }
