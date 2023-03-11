@@ -2,9 +2,13 @@ function setup() {
 
     createP("Note randomizer for practicing");
     createCanvas(300,300);
-    frameRate(1/15);
-    const notes =["A","B","C","D","E","F","G"];
+    frameRate(1/2);
+    const pianotes =["A","B","C","D","E","F","G"];
 
+}
+
+function mousePressed(){
+   createP(random(pianotes)); 
 }
 
 function draw() {
@@ -13,7 +17,7 @@ function draw() {
 
     //const notes =["A","B","C","D","E","F","G"];
 
-    let a = random(notes);
+    let a = random(pianotes);
     strokeWeight(12);
 
     textSize(64);
