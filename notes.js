@@ -18,7 +18,7 @@ function setup() {
     createCanvas(300,320); //(X,Y)
     background(230);
     randomNote();
-    frameRate(1/2);
+    frameRate(2);
     // image(fClef,0,0,50,50);
     // image(gClef,100,100);
 }
@@ -28,7 +28,8 @@ function draw() {
     randomNote();
     // fill("black");
     // image(gClef,30,100);
-
+    // console.log(deltaTime);
+    
 }
 
 function randomNote() {
@@ -42,6 +43,10 @@ function randomNote() {
     ellipse(150,b,26,18);
     fill(230);
     ellipse(150,b,16);
+    if(b==200) {
+        line(120,b,180,b);
+    }
+
     for( let i = 0; i<5; i++) {
         line(10,100+20*i,290,100+20*i);
         line(10,220+20*i,290,220+20*i);
