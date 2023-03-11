@@ -30,13 +30,16 @@ function draw() {
     // fill("black");
     // image(gClef,30,100);
     // console.log(deltaTime);
-    
+    textSize(3);
+    text("Speed "+speed,0,0);
 }
 
 function mousePressed() {
     speed+=.25 %  3;
     
     frameRate(speed)
+    // textSize(3);
+    // text("Speed "+speed,0,0);
 }
 
 function randomNote() {
