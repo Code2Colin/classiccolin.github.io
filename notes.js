@@ -7,6 +7,7 @@ const pianotes =[["A",[150,220,290]],
                 ["G",[90,160,230,300]]];
 let fClef;
 let gClef;
+let speed=1;
 
 function preload(){
     fClef = loadImage('216px-FClef.png');
@@ -18,7 +19,7 @@ function setup() {
     createCanvas(300,320); //(X,Y)
     background(230);
     randomNote();
-    frameRate(2);
+    frameRate(speed);
     // image(fClef,0,0,50,50);
     // image(gClef,100,100);
 }
@@ -30,6 +31,12 @@ function draw() {
     // image(gClef,30,100);
     // console.log(deltaTime);
     
+}
+
+function mousePressed() {
+    speed+=.25 %  3;
+    
+    frameRate(speed)
 }
 
 function randomNote() {
