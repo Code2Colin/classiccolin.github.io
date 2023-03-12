@@ -7,7 +7,9 @@ const pianotes =[["A",[150,220,290]],
                 ["G",[90,160,230,300]]];
 let fClef;
 let gClef;
-let speed=.5;
+let speed=.333;
+let a;
+let b;
 
 function preload(){
     fClef = loadImage('216px-FClef.png');
@@ -27,19 +29,23 @@ function draw() {
 }
 
 function mousePressed() {
-    speed= (speed + .5 ) %  3;
-    frameRate(speed);
+    // speed= (speed + .5 ) %  3;
+    // frameRate(speed);
+    strokeWeight(2);
+    textSize(60);
+    fill("black");  
+    text(" " + a[0], 110, 70);
     // textSize(3);
     // text("Speed "+speed,0,0);
 }
 
 function randomNote() {
-    let a = random(pianotes);
-    let b = random(a[1]);
-    strokeWeight(2);
-    textSize(60);
-    fill("black");  
-    text(" " + a[0], 110, 70);
+    a = random(pianotes);
+    b = random(a[1]);
+    // strokeWeight(2);
+    // textSize(60);
+    // fill("black");  
+    // text(" " + a[0], 110, 70);
 
     ellipse(150,b,28,18);
     fill(230);
