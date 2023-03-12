@@ -7,7 +7,7 @@ const pianotes =[["A",[150,220,290]],
                 ["G",[90,160,230,300]]];
 let fClef;
 let gClef;
-let speed=1;
+let speed=.5;
 
 function preload(){
     fClef = loadImage('216px-FClef.png');
@@ -24,15 +24,10 @@ function setup() {
 function draw() {
     background(230);
     randomNote();
-    // fill("black");
-    // image(gClef,30,100);
-    // console.log(deltaTime);
-    // textSize(3);
-    // text("Speed "+speed,0,0);
 }
 
 function mousePressed() {
-    speed= (speed + .75 ) %  3;
+    speed= (speed + .5 ) %  3;
     frameRate(speed);
     // textSize(3);
     // text("Speed "+speed,0,0);
@@ -44,11 +39,11 @@ function randomNote() {
     strokeWeight(2);
     textSize(60);
     fill("black");  
-    
     text(" " + a[0], 110, 70);
-    ellipse(150,b,26,18);
+
+    ellipse(150,b,28,18);
     fill(230);
-    ellipse(150,b,16);
+    ellipse(150,b,18);
     if(b==200) {
         line(120,b,180,b);
     }
@@ -58,8 +53,8 @@ function randomNote() {
         line(10,220+20*i,290,220+20*i);
     }
     image(gClef,15,85,50,120);
-    image(fClef,15,220,50,70);
-    fill(50);
-    textSize(12);
-    text("Speed x"+speed,10,20);
+    image(fClef,15,220,60,70);
+    fill(20);
+    textSize(10);
+    text(" "+1/speed+" secs",10,315);
 }
