@@ -19,8 +19,6 @@ function setup() {
     background(230);
     randomNote();
     frameRate(speed);
-    // image(fClef,0,0,50,50);
-    // image(gClef,100,100);
 }
 
 function draw() {
