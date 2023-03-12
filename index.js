@@ -73,4 +73,64 @@
 //         }
 //     }
 // });
+console.log("loaded")
+const min = 5;
+const max = 12;
+const points = 5;
+let data = []
+let label =[]
+for ( let i = 0; i < points ; i++){
+    data.push(max);
+    data.push(min);
+    label.push('');
+    label.push('');
+}
+data.push(max);
 
+function morePoints(){
+    data.pop();
+    data.push(max);
+    data.push(min);
+    data.push(max);
+    label.push('');
+    label.push('');
+    myChart.update();
+}
+
+function lessPoints(){
+    data.pop();
+    data.pop();
+    label.pop();
+    label.pop();
+    myChart.update();
+}
+
+console.log(data)
+const ctx = document.getElementById("myChart").getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: label,
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'Star Chart',
+            // data: [12, 19, 3, 5, 7, 3, 13],
+            data: data,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 3,
+            fill: true
+        }]
+    },
+    options: {
+        scales: {
+            r: {
+                beginAtZero: true
+            }
+        },
+        layout: {
+            padding:10
+        },
+        responsive: false
+    }
+});
