@@ -42,7 +42,7 @@ function mousePressed() {
 function randomNote() {
     a = random(pianotes);
     b = random(a[1]);
-    // strokeWeight(2);
+    strokeWeight(2);
     // textSize(60);
     // fill("black");  
     // text(" " + a[0], 110, 70);
