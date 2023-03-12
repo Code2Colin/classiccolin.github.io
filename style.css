@@ -13,9 +13,6 @@ canvas {
 
 body{ 
     background-color: gray;
-    /* opacity: 0.60; */
-
-
 }
 
 .grid-container {
@@ -34,8 +31,6 @@ body{
 
 #myChart{
     background-color: white;
-    /* padding: 30px; */
-    /* margin: 30px; */
     text-align: center;
 }
 
@@ -45,4 +40,11 @@ button{
     background-color: salmon;
     font-size: medium;
     font: bold; 
+}
+
+canvas{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
 }
