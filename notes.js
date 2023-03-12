@@ -11,7 +11,6 @@ let speed=1;
 
 function preload(){
     fClef = loadImage('216px-FClef.png');
-
     gClef = loadImage('GClef.png');
 }
 
@@ -35,8 +34,8 @@ function draw() {
 }
 
 function mousePressed() {
-    speed= (speed + .25 ) %  3;
-    frameRate(speed)
+    speed= (speed + .75 ) %  3;
+    frameRate(speed);
     // textSize(3);
     // text("Speed "+speed,0,0);
 }
@@ -62,6 +61,7 @@ function randomNote() {
     }
     image(gClef,15,85,50,120);
     image(fClef,15,220,50,70);
-    textSize(3);
-    text("Speed "+speed,0,0);
+    fill(50);
+    textSize(12);
+    text("Speed x"+speed,10,20);
 }
