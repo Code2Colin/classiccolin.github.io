@@ -63,4 +63,7 @@ function randomNote() {
     fill(20);
     textSize(10);
     text(" "+1/speed+" secs",10,315);
+
+    line(100,100,160,60);
+    
 }
