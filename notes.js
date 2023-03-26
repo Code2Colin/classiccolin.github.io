@@ -43,8 +43,8 @@ function randomNote() {
     a = random(pianotes);
     b = random(a[1]);
     strokeWeight(2);
-    // textSize(60);
-    // fill("black");  
+    textSize(60);
+    fill("black");  
     // text(" " + a[0], 110, 70);
 
     ellipse(150,b,28,18);
@@ -64,6 +64,5 @@ function randomNote() {
     textSize(10);
     text(" "+1/speed+" secs",10,315);
 
-    line(100,100,160,60);
     
 }
