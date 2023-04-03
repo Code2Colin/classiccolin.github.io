@@ -10,6 +10,17 @@ let gClef;
 let speed=.333;
 let a;
 let b;
+var noteA;
+var noteB;
+var noteC;
+var noteD;
+var noteE;
+var noteF;
+var noteG;
+var score = 0;
+var wrong = 0;
+
+
 
 function preload(){
     fClef = loadImage('216px-FClef.png');
@@ -21,6 +32,26 @@ function setup() {
     background(230);
     randomNote();
     frameRate(speed);
+
+
+
+    noteA = createButton("A");
+    noteA.mousePressed(checkNote,"A");
+    noteB = createButton("B");
+    noteB.mousePressed(checkNote,"B");
+    noteC = createButton("C");
+    noteC.mousePressed(checkNote,"C");
+    noteD = createButton("D");
+    noteD.mousePressed(checkNote,"D");
+    noteE = createButton("E");
+    noteE.mousePressed(checkNote,"E");
+    noteF = createButton("F");
+    noteF.mousePressed(checkNote,"F");
+    noteG = createButton("G");
+    noteG.mousePressed(checkNote,"G");
+
+
+
 }
 
 function draw() {
@@ -37,6 +68,21 @@ function mousePressed() {
     text(" " + a[0], 110, 70);
     // textSize(3);
     // text("Speed "+speed,0,0);
+}
+
+function checkNote(guess) {
+    if (this.elt.innerText == a[0] ) {
+        score++;
+        console.log(score);
+        select('#score').elt.innerText = score
+    } else {
+        wrong++;
+        console.log(wrong);
+        select('#wrong').elt.innerText = wrong
+    }
+    // console.log(this.elt.innerText);
+    // console.log(a[0]);
+    // console.log(score);
 }
 
 function randomNote() {
