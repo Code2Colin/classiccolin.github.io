@@ -9,7 +9,7 @@ let fClef;
 let gClef;
 let speed=.333;
 let a;
-let b;
+let b; 
 var noteA;
 var noteB;
 var noteC;
