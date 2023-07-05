@@ -40,6 +40,7 @@ button{
     background-color: rgb(255, 0, 0);
     font-size: medium;
     font: bold; 
+    align-items: center;
 }
 
 canvas{
