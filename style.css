@@ -1,9 +1,12 @@
 h1 {
-    text-align:center
+    text-align: center;
+    font-size: 50px;
+
 }
 
 p {
-    text-align: center
+    text-align: center;
+    font-size:30px;
 }
 
 canvas {
@@ -15,17 +18,29 @@ body{
     background-color: gray;
 }
 
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+
 .grid-container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        'header header header header header header'
+        'menu main main right right right'
+        'menu footer footer footer footer footer';
+    gap: 10px;
     padding: 10px;
+
 }
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center; 
 }
 
@@ -35,10 +50,10 @@ body{
 }
 
 button{
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
     background-color: rgb(255, 0, 0);
-    font-size: medium;
+    font-size: 30px;
     font: bold; 
 }
 
