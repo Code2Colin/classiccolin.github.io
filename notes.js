@@ -30,7 +30,7 @@ function preload(){
 function setup() {
     
     var canvas = createCanvas(300,320); //(X,Y)
-    canvas.parent("myCanvas")
+    canvas.parent("myCanvas");
     background(230);
     randomNote();
     frameRate(speed);
