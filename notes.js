@@ -28,28 +28,37 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(300,320); //(X,Y)
+    
+    var canvas = createCanvas(300,320); //(X,Y)
+    canvas.parent("myCanvas")
     background(230);
     randomNote();
     frameRate(speed);
-
-
-
+ 
+    
     noteA = createButton("A");
     noteA.mousePressed(checkNote,"A");
+    noteA.parent("myCanvas");
     noteB = createButton("B");
     noteB.mousePressed(checkNote,"B");
+    noteB.parent("myCanvas");
     noteC = createButton("C");
     noteC.mousePressed(checkNote,"C");
+    noteC.parent("myCanvas");
     noteD = createButton("D");
     noteD.mousePressed(checkNote,"D");
+    noteD.parent("myCanvas");
     noteE = createButton("E");
     noteE.mousePressed(checkNote,"E");
+    noteE.parent("myCanvas");
     noteF = createButton("F");
     noteF.mousePressed(checkNote,"F");
+    noteF.parent("myCanvas");
     noteG = createButton("G");
     noteG.mousePressed(checkNote,"G");
+    noteG.parent("myCanvas");
 
+    selectall
 
 
 }

@@ -28,9 +28,9 @@ body{
 .grid-container {
     display: grid;
     grid-template-areas: 
-        'header header header header header header'
-        'menu main main right right right'
-        'menu footer footer footer footer footer';
+        'header header header header header header header header'
+        'menu main main main main right right right'
+        'menu footer footer footer footer footer footer footer';
     gap: 10px;
     padding: 10px;
 
@@ -50,12 +50,14 @@ body{
 }
 
 button{
+    display: inline-grid;
+    align-items: center;
     padding: 5px;
     margin: 10px;
     background-color: rgb(255, 0, 0);
     font-size: 30px;
     font: bold; 
-    align-items: center;
+    
 }
 
 canvas{
