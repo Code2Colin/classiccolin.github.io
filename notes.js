@@ -58,7 +58,6 @@ function setup() {
     noteG.mousePressed(checkNote,"G");
     noteG.parent("myCanvas");
 
-    selectall
 
 
 }
