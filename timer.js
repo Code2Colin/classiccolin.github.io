@@ -12,7 +12,7 @@ function update(curr,inter) {
     let current = Number(document.getElementById("timer2").innerHTML);
         if (current % 60 == 0){
             beep.play();
-        } else if (current - inter % 60 == 0){
+        } else if ((current - inter) % 60 == 0){
             beep.play();
         } else {}
     }
