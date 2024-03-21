@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "create-react-app": "^1.2.1",
+    "tar": "^6.2.0",
+    "tart": "^0.3.0"
+  }
+}
