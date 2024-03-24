@@ -1,6 +1,6 @@
-let head = [10, 10, 1.50]
+let head = [10-Math.random(), 10-Math.random(), 1.5-Math.random()]
 let tail = [0, 0, 0];
-let scaling= 4;
+let scaling=2;
 
 function setup() {
     let canvas = createCanvas(600,600,WEBGL);
