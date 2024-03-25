@@ -1,9 +1,9 @@
-let head = [10-Math.random(), 10-Math.random(), 1.5-Math.random()]
+let head = [10-Math.random(5), 10-Math.random(5), 1.5-Math.random()]
 let tail = [0, 0, 0];
 let scaling=2;
 
 function setup() {
-    let canvas = createCanvas(600,600,WEBGL);
+    let canvas = createCanvas(500,500,WEBGL);
     canvas.parent("myCanvas");
     frameRate(300);
     background(175);
